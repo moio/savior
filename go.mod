@@ -3,11 +3,11 @@ module github.com/itchio/savior
 go 1.12
 
 require (
+	github.com/andybalholm/brotli v1.0.3
 	github.com/getlantern/mtime v0.0.0-20200417132445-23682092d1f7 // indirect
 	github.com/getlantern/ops v0.0.0-20200403153110-8476b16edcd6 // indirect
 	github.com/itchio/arkive v0.0.0-20200618123031-1a30392a8cfe
 	github.com/itchio/dskompress v0.0.0-20190702113811-5e6f499be697
-	github.com/itchio/go-brotli v0.0.0-20190702114328-3f28d645a45c
 	github.com/itchio/headway v0.0.0-20200301160421-e15721f23905
 	github.com/itchio/httpkit v0.0.0-20200618110940-5044e418b971
 	github.com/itchio/kompress v0.0.0-20200301155538-5c2eecce9e51

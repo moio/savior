@@ -4,7 +4,8 @@ import (
 	"bytes"
 	"os/exec"
 
-	"github.com/itchio/go-brotli/enc"
+	"github.com/andybalholm/brotli"
+
 	"github.com/itchio/kompress/flate"
 	"github.com/itchio/kompress/gzip"
 
@@ -68,9 +69,7 @@ func Bzip2Compress(input []byte) ([]byte, error) {
 func BrotliCompress(input []byte, level int) ([]byte, error) {
 	compressedBuf := new(bytes.Buffer)
 
-	w := enc.NewBrotliWriter(compressedBuf, &enc.BrotliWriterOptions{
-		Quality: level,
-	})
+	w := brotli.NewWriterLevel(compressedBuf, int(level))
 
 	_, err := w.Write(input)
 	if err != nil {
